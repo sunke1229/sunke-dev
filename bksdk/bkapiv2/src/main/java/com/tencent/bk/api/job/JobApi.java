@@ -35,6 +35,25 @@ public class JobApi extends Api {
     }
 
     /**
+     * 查询脚本列表
+     */
+    public ApiResp<ScriptList> getScriptList(GetScriptListReq esbReq) {
+        return invokePost("/api/c/compapi/v2/job/get_script_list/", esbReq,
+                new TypeReference<ApiResp<ScriptList>>() {
+                });
+    }
+
+
+    /**
+     * 查询脚本列表
+     */
+    public ApiResp<Script> getScriptDetail(GetScriptDetailReq esbReq) {
+        return invokePost("/api/c/compapi/v2/job/get_script_detail/", esbReq,
+                new TypeReference<ApiResp<Script>>() {
+                });
+    }
+
+    /**
      * 快速执行SQL脚本
      */
     public ApiResp<JobInstanceResult> fastExecuteSQL(FastExecuteSQLReq esbReq) {

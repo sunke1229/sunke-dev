@@ -64,7 +64,14 @@ public class IndexPageController extends BaseController {
 
         }
 
-        view.setViewName("/index"); //首页
+        view.setViewName("/firstPage"); //首页
+        return view;
+    }
+
+
+    @RequestMapping("/runScript")
+    public ModelAndView runScript(ModelAndView view) {
+        view.setViewName("/runScript");
         return view;
     }
 
